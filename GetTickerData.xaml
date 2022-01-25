@@ -1,0 +1,297 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="OpenBrowser" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_userInputTicker" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1237,2571</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>OpenBrowser_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="34">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Core.Activities.Storage</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="OpenBrowser" sap:VirtualizedContainerService.HintSize="602,2506" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="560,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Ticker Data Download Start for Ticker: &quot; +in_userInputTicker]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Open Browser - Firefox" sap:VirtualizedContainerService.HintSize="560,2283" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="e855bacc-e6e9-46b0-90e7-05f40318437a" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Sequence - Get Ticker Data" sap:VirtualizedContainerService.HintSize="526,2067" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="ui:UiElement" Name="dlButtonExist" />
+              <Variable x:TypeArguments="x:Boolean" Name="tickerNotFound" />
+              <Variable x:TypeArguments="x:Boolean" Name="symbolFound" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Trace" Message="[&quot;Open Browser and Navigate to Site&quot;]" />
+            <ui:UiElementExists sap2010:Annotation.AnnotationText="Check if the site is correctly loaded" DisplayName="Element Exists - Symbol Found" Exists="[symbolFound]" sap:VirtualizedContainerService.HintSize="484,137" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
+              <ui:UiElementExists.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="00fd6676-2161-48bf-a124-cd034033957c" InformativeScreenshot="cb22b0f6d53a3a89ed75c7d29ae6a717" Selector="[String.Format(&quot;&lt;html app='firefox.exe' title='*({0}) Stock Historical Prices &amp;amp; Data - Yahoo Finance' /&gt;&lt;uia automationid='tabbrowser-tabs' role='tab' /&gt;&quot;, in_userInputTicker)]">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:UiElementExists.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:UiElementExists>
+            <If Condition="[NOT symbolFound]" sap:VirtualizedContainerService.HintSize="484,304" sap2010:WorkflowViewState.IdRef="If_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="242,116" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="Wrong Ticker Symbol, Please Try Again" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <Sequence sap2010:Annotation.AnnotationText="Set Time Period to Max" DisplayName="Sequence - Set Max Timeline" sap:VirtualizedContainerService.HintSize="484,97" sap2010:WorkflowViewState.IdRef="Sequence_16">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Trace" Message="[&quot;Setting Maximum Timeline&quot;]" />
+              <uix:NClick ClickType="Single" DisplayName="Click 'Time Period'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e855bacc-e6e9-46b0-90e7-05f40318437a" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://finance.yahoo.com/quote/BRT/history?p=BRT" DesignTimeRectangle="626, 672, 8, 5" ElementType="Icon" FriendlyName="'PATH'" FullSelectorArgument="&lt;webctrl parentid='Col1-1-HistoricalDataTable-Proxy' tag='path' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='Col1-1-HistoricalDataTable-Proxy' tag='path' type='' aaname='' /&gt;" Guid="45966b5c-94ba-4877-8ceb-80d1b8af9fd8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAwAAAAJCAYAAAAGuM1UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABkSURBVChTY/jw+et/UjBcw/YLP/4fvfkdQwFIDCQH48M1aFX9+y9b+A9FE4gNEgPJwcTgGkCSMgUITTDFIDFkQ1D8gKwJm2IQxvA0TBM2xSCMoQGEQQqxKQZhrBrwYRI1fP0PAKLHiGCBsz2DAAAAAElFTkSuQmCC" InformativeScreenshot="20c741f278ec6d8b126483c1b8d17410.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='BRT Apartments Corp. (BRT) Stock Historical Prices &amp;amp; Data - Yahoo Finance' /&gt;" SearchSteps="FuzzySelector, Image">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target DesignTimeRectangle="360, 663, 70, 16" ElementType="Text" FriendlyName="'Time Period'" FullSelectorArgument="&lt;webctrl aaname='Time Period' parentid='Col1-1-HistoricalDataTable-Proxy' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Time Period' parentid='Col1-1-HistoricalDataTable-Proxy' tag='SPAN' type='' check:text='Time Period' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAUCAYAAAAqVKv2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPcSURBVFhH7ZddSBRRFMcHLiy0MvuwuLS+bIYIi4EmgaYZRAUr9GFGRWVSWlYYZEtQD/ax9dRDBZkpImJFadKn9EEQYVGEIImm2YdhiqW4sqwg+/zv3Dsz6+w6tpPlQrAPP5w759x7z/7nnnOu0tR0CAlikxDKJAmhTJIQyiQJoUyiCBUYw6ePn9BnwLcJsg+14ujuc3gyGjn5nzIxMntfIz8zBN7gwu6DaOgzsJmgv3kvlh+4HfFOEeqdF6mSBMkATyO3VyPbsQYXBmYm/nMaC6P2tmBxwTl0BAx8YzF6A9tcS7D/oYHNBG+PLYXkaYp4Nyv1jJzighCqEA3q2P+5Hh6bhIzqvki/ODB/obp8yHHk4nQXH9/GTsdqVFQXI83KIFlkZB95jBd1xXDLFkjMirSSVgxqcwM9qN3ihmyhU0K+br1NT5RQnAYPzVFj8XfXo8gtw0KnzSK7satlWPXj8WzE2ZterHLJkLfwlOHvHNh5S10r8BXNFdlI4fFSfCkFXtz9HFTnh3RrMyxKK0blZtc8hRKpuRRV7/i4CR4pCXnnX1EdCWLkfimcFHzGcXX8/DD5JmPfM+4bxJ0dNlizTqL9+yTG+5ux1cmQ6TM4JdFCUZ2pTJXgPPiSnu9huy0JmSee0h6T6G3aBifLwpkP3JfHI8G24hAaO6i+0T7aO1E21BhYejlaesYw/qMXLWXpYM5yPOFpLdZmSC9rQy+Pv6cNlVlJYQ3u7KBnW8l8hdKetbEWFId+oEsdB8jGUlDaNlOk75XT18q/hGH9+hwhlBPZm4uwab3y9Zl9ExqGQvCTjaXsRWu42D9CGe2Rd/EnzY2Oh6OLScSgfTiN59iXzLDhekhZO5lEC9siNfB3P0LNg56FEKoTVXQSxFjMs0CmNHDoyfGhU78+Rwi1DKW111BDtHYMYkQt5CImStuINYics+/JHkMoEcM61EY0BSXG1GOdytrr6uEP24w1WFihRi8hb9aPmIPo1NMxfHEVpFQv3hrYYgolYnCh8rXerpz6tXVB9PuyZq0df6Gmf+Lyagab5yrlv2afxDdRR7Sxym+Emhq9ggJmg6fmI8a1d3TvUu5aMYQKx1CPAXGqghioK4TNSnvxe+GHU8iglC9pV2Oa6IIvf6ZGxSf1+HjoMapy7WC8o8hW+ktdS3QmzV/ld0IRg+1e5NqVriXz7kUpXSS6WiyhCIqhIpP2Vucy+0pUtWtdM4gO30rYGe+m1PksGajYkxPWYM5ivmCoN++/unET4995MR+ZOVl/gP/HIPq+jEXUozDiv5O5142fUP85CaFMkhDKJAmhTBHCLz9y8WT1WE87AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                        <uix:Target DesignTimeRectangle="690, 479, 91, 16" ElementType="Text" FriendlyName="'Historical Data'" FullSelectorArgument="&lt;webctrl aaname='Historical Data' parentid='quote-nav' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Historical Data' parentid='quote-nav' tag='SPAN' type='' check:text='Historical Data' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAUCAYAAADr0+FaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUsSURBVFhH7VfvS5tXFN7/MhApgVQj6ZoaW1nQKels7UoX1Lms4uIyN1dZG6Zkbi1NWbZlEnQKuoUpU7SKKCFOtD+obupWKrZqV1O2+msWGjF+qJAvz+59771v3sTERuuWL3ngQN7znnvuOc97zrk3ryCFpCFFfhKRIj+JSJGfRKTITyIU5IcQXF/DyiqRwDbXUWwjQHWyPoih2jyotXmw3Qwxk/8aC9/jTW021GUe/M1Ve8cyxpuuwlJxET/4uYrjeYDnx2V96//JS0H+QzjyMvDqISKWIa6jGMJ5qpP192DPYc/G1n+YSRw8+bUP3SThBu/udi/CZlcF0uj+GhvGuG7vEHkY4VjgKo5+C89PIel6E2qv/0VKMhEEcX+4D+3OOrTc5aoEsA/yQwj4ZzA1PYcV0SDbG3j0mw/d3ik8Wt3Ac6Ki1dT+Llun/3ycVNRTBEUmoS2sL05h8MZsnC4L+1hZ30Joew2z03/grn9DQQbr1Hs3fJhYXINwE9p6StbPYlQRC0MC5GuKUFp6GpmZGvZ8SAtTV4BbsdhonqMzyu6gcYyj7nXmo8QTjl/Kk6yJjlFgH+SH7c4PEP8P3MhX8/dcqH5nNbGkQw/acEYnkqOiRY5tDM8i9qrCFdcZpNPfeS7MD1QzW/qbmgXGUGvQKnywPeF3w6DQUUnT1aBf4i8B8oX/0BwchTxG3m1DVmXMVLTId80R6hW8yVKNfjyGszBKrzqBygHxMeORn2OCpfoCFxNeE4tjkC+CKviGVDGtOI8LnaT16MixFTG7rIpmdPeO4P6z2/hYS3Ua6KwtRPcdTPzZ2LpEfCs+NBV1NjJPu6PIX0JzMdszTfcO7B4y2no78Asl1N+GitKraOwlOo8DpyTfGTjufKjwnQD5BJsdZqbj9r4vTKhydpC9+tBozWdjUEVIDtGR04zyY8xHQT2NZxJPCPlNVWbYm1h89rP6HXvEJj+e7EJ+usGMC84+TCyHe0skxZInuGmDSvJVhR7etbPXCpjvQjcWZYJy8ckoGTfMBFCSv9YGI7f5bJq/j4I0rmZu4StzDlsnxb038uU9iUhdRSGNET8mBuqQF+ErkpMIkJEsFeW3lciQ1tCuYIhNflGD9IWZNKBAWkQk5tjZOUZOtdMqjkG+SOiIHXeYBqHrVUwnJR6HICX5Cy4cj2VDsdSD9/SR40iSfZAfWflBTDrOQaXidrLsRv4yOt83sNEZIS8iXwpWQAQt9DE2ohVBKq3RYmB2xW1YJeod5E9fRpbkywxPkKkm7bmKNQmQL1e+DtaR8PFLIbow6+IN6XCfdxrZuj2SH1q/g08FF9p63JbPkjK4pc6O9hWDE28NG03H6jBCD2e5aA6Q/P6PCnHukgvtirmWZh2WVoqk0nLLyNlxDYNr4bWHzzrQ3lQDnVRNelR66ddIgHxyress552mJnt/2SJd8Wy9j2XyVSVfY9D7EypzuV2i5KuOIjM7W1GtepIjOSBl8o34sMeHrsslOBzhS5GX8QOS64/4XZCvMeOK14c2cU4cJPm+2qPcKZN0Qz2G+YG+6b2EI/JNiAdKbypvKNaoDXi7ld4aKBIhn2B7Bo1lkS1Nuyvi5kVvFpYy9jtR8oWQg17/Vj1+/lOcXwH0W0/IMaefrEG5dLUM+5p3K8cSPYjn4DwpRqAGGms1isU7tkRJ/kuA32cj7+wC/O4e9Y7dx5X38H0g5r5sv5ihvCSkmOn/Dv68Azwe5T9k6fCPE8zBkJ/CvpAiP4lIkZ9EpMhPGoB/ATSGXTz+Lxj+AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Max'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e855bacc-e6e9-46b0-90e7-05f40318437a" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://finance.yahoo.com/quote/BRT/history?p=BRT" DesignTimeRectangle="618, 742, 25, 16" ElementType="Text" FriendlyName="'Max'" FullSelectorArgument="&lt;webctrl aaname='Max' parentid='dropdown-menu' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Max' parentid='dropdown-menu' tag='SPAN' type='' check:text='Max' /&gt;" Guid="4c335000-ab40-4256-9d89-63b684f6da25" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB0AAAAUCAYAAABxnDbHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI/SURBVEhL7VT/SxNhHO7/PLjQcwyPa5vTjl2M5lQk3aQhQtlgLFs7VqEUE4qJUbFWJENwpCwndiwm6loHawx/efrcl23vDfqhC6Mf/OGBu+f9vO/zfp7nc3ftZ/cC/xpXopeK/0G0jZN6Ayc6y9nQm/hab6I1zLuAU7T9GrOCCG9yz1Fk4OjpDDghgrWak3cDp2g1Bz+JcuIqiizfrSEtEy+Eka6yvDs4RQ9U3BBCECcCWCp2BvzeI+KIpwvNb1uc9uY+Jn0B8MTx4yFMZ3bRMOsP8TgiQ3lSs/efIx9TEH1Rt9+HRbeXwU2peJ4KgY+/hW7z5aQMMVUwu7292TI5bbeEnUPK//sP1Msqgp4AEh+sep0u7/dQFORKY3MR15UcKu2BjkNULyTAyTnsaxu46Ykj3yS+/RFL4gyy2jHWFBH+TK8DFlWkpti1DiqZCIlFEfRa4my9Q3Q/EwY39wpn3W/Ihq2u9OI9jIY3cETrW3ERoys7Zq3eKCMbm4ZX8pG9QYx4hi6kv8OdcREjiVLfsR4copWHt8CRrcaztj4HLqwiPS/1LS2uBOz1z3gwQSKrn3Bsfl7WoLGdlpMhjEUXzE7TB8x8EByiRif9z6VZQNQjgffaNhNnOqE8w5fueyxShv1hOy0h5huImplKy9g6pT1qBLys/i7TDl4usLdtIU9dsgN1RkNhDFrFyEydJUt9EPxkre8uohSHubdN+cqTNOXn9jk1mgUJYxRL7xxHp38Ml3+pvxN1iSvRS8QFfgE+mUX0uohOoAAAAABJRU5ErkJggg==" InformativeScreenshot="994abbe8445226d6d4c6308bcae31271.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='BRT Apartments Corp. (BRT) Stock Historical Prices &amp;amp; Data - Yahoo Finance' /&gt;" SearchSteps="FuzzySelector, Image">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target DesignTimeRectangle="608, 736, 45, 28" ElementType="Button" FriendlyName="'Max'" FullSelectorArgument="&lt;webctrl aaname='Max' parentid='dropdown-menu' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Max' parentid='dropdown-menu' tag='BUTTON' type='' check:text='Max' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADEAAAAgCAYAAAC7FpAiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKlSURBVFhH7ZjxaxJhGMf7Pw+MzYnsMHVuiYbk3MZo05GMQS1BbJmHFY3CQeFYVJhFQwaTNmwOE8M15+zAzPrl2/Oeejs3W4tz4ya+8AX9Pvfq83mf57mDu4IeWL0HUToUkSt807xYnsolQ7BAsVRB9ecv/Kj/1qxYfixPJYgMwQi1DtASy5Pl21ptEJ02aFV9CK2oD6EV9SEaqmKvUMSe2CEmlvGlUEbluN9lqYeovsKknocxsHkitvt4ApzejaVsu99tqYfIRGEhCI5fRKItlkXITr7ehVBG6Xdf6iG2BVzTO8CPWDGXqB35mw/II58Ap9caXv71XYyardCRpxt2YDy8gaJ0/Q4euu1wPso29x8g5nXC87zQ/H661EOszYMbE/As6IDO9wZi008F7OCDcakaN1cqkpffSGJ9h+bn8DsKKQE2gxX+943rRToMi4Faj6pWXJnFVWcU6arif06Raggx7gdnj2Irv4zrBh9iZfKrHzDHTyCSz2HJycMSbp2wUhkEx5SxGtJhNyXvgc3YgDm5p7NUQ2yFXeCmXqJU/4qIq3HqYuIOBl3L2KX4qo/H4MK6dK1YTCHiHYfRZKZ2smHAcAxQfItbwzwG/Em5omeRaoj0/RvgqI3Y5/zTKXAuAaFpk9xCiQVrM/4J90Yo6cWPyEm348bgKyuRCjgw5JmRKhHaVszXP6Qagp20fHstx+ExmKAzNtuKPKlSzif4XH+HWZoBefj3k/CajyCkmTDNY3Wf9ghu6OzCRc1EDS9mlKdZQYyqoBzwEg0pG/w063lhklrIDL2FWsl8Gx5qP2lvlebDPkp3sYPm72RplkwYojY8S1uprsR/6xye4hcPcQ7qQ2hFfQit6K8Ql/6VTU+8PGOLBRih1qUEYKsN4rKuHoAA/gAE/05Bq2CBNAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                        <uix:Target DesignTimeRectangle="360, 663, 70, 16" ElementType="Text" FriendlyName="'Time Period'" FullSelectorArgument="&lt;webctrl aaname='Time Period' parentid='Col1-1-HistoricalDataTable-Proxy' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Time Period' parentid='Col1-1-HistoricalDataTable-Proxy' tag='SPAN' type='' check:text='Time Period' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAUCAYAAAAqVKv2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPcSURBVFhH7ZddSBRRFMcHLiy0MvuwuLS+bIYIi4EmgaYZRAUr9GFGRWVSWlYYZEtQD/ax9dRDBZkpImJFadKn9EEQYVGEIImm2YdhiqW4sqwg+/zv3Dsz6+w6tpPlQrAPP5w759x7z/7nnnOu0tR0CAlikxDKJAmhTJIQyiQJoUyiCBUYw6ePn9BnwLcJsg+14ujuc3gyGjn5nzIxMntfIz8zBN7gwu6DaOgzsJmgv3kvlh+4HfFOEeqdF6mSBMkATyO3VyPbsQYXBmYm/nMaC6P2tmBxwTl0BAx8YzF6A9tcS7D/oYHNBG+PLYXkaYp4Nyv1jJzighCqEA3q2P+5Hh6bhIzqvki/ODB/obp8yHHk4nQXH9/GTsdqVFQXI83KIFlkZB95jBd1xXDLFkjMirSSVgxqcwM9qN3ihmyhU0K+br1NT5RQnAYPzVFj8XfXo8gtw0KnzSK7satlWPXj8WzE2ZterHLJkLfwlOHvHNh5S10r8BXNFdlI4fFSfCkFXtz9HFTnh3RrMyxKK0blZtc8hRKpuRRV7/i4CR4pCXnnX1EdCWLkfimcFHzGcXX8/DD5JmPfM+4bxJ0dNlizTqL9+yTG+5ux1cmQ6TM4JdFCUZ2pTJXgPPiSnu9huy0JmSee0h6T6G3aBifLwpkP3JfHI8G24hAaO6i+0T7aO1E21BhYejlaesYw/qMXLWXpYM5yPOFpLdZmSC9rQy+Pv6cNlVlJYQ3u7KBnW8l8hdKetbEWFId+oEsdB8jGUlDaNlOk75XT18q/hGH9+hwhlBPZm4uwab3y9Zl9ExqGQvCTjaXsRWu42D9CGe2Rd/EnzY2Oh6OLScSgfTiN59iXzLDhekhZO5lEC9siNfB3P0LNg56FEKoTVXQSxFjMs0CmNHDoyfGhU78+Rwi1DKW111BDtHYMYkQt5CImStuINYics+/JHkMoEcM61EY0BSXG1GOdytrr6uEP24w1WFihRi8hb9aPmIPo1NMxfHEVpFQv3hrYYgolYnCh8rXerpz6tXVB9PuyZq0df6Gmf+Lyagab5yrlv2afxDdRR7Sxym+Emhq9ggJmg6fmI8a1d3TvUu5aMYQKx1CPAXGqghioK4TNSnvxe+GHU8iglC9pV2Oa6IIvf6ZGxSf1+HjoMapy7WC8o8hW+ktdS3QmzV/ld0IRg+1e5NqVriXz7kUpXSS6WiyhCIqhIpP2Vucy+0pUtWtdM4gO30rYGe+m1PksGajYkxPWYM5ivmCoN++/unET4995MR+ZOVl/gP/HIPq+jEXUozDiv5O5142fUP85CaFMkhDKJAmhTBHCLz9y8WT1WE87AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                        <uix:Target DesignTimeRectangle="462, 866, 80, 34" ElementType="Button" FriendlyName="'Done'" FullSelectorArgument="&lt;webctrl aaname='Done' parentid='dropdown-menu' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Done' parentid='dropdown-menu' tag='BUTTON' type='' check:text='Done' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAAmCAYAAABagbwLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ9SURBVGhD7ZrLahRBFIZ9g3kA3yB7n0HcxU0WPkGyU7IJWenGCyQb0RgiCSSI40LNYiR4IQohLkQkuFGDioqowQvqQBwSIr//6arTUyMNPY7VlRk4H/zQXefUNPlSXdMDfQBGVExoZDqEjteBgyeA2pilm4grcRaSC5VC0SRLeUKpuVBbmb1H3Cm50KJGS/dRTGikKCY0UhQTGimKCY0UxYRGimJCI0UxoZGimNBIUZIKPXwRGNFMFfcMapSkQjf8tXL2gOccPDpZ3D9IUdILbQInZYVeBRrvM6fYfgccKegfpCjphf4ERoOxGUoV7lzzY1ytM6+BXTeM3W2Kv+lri8AWx16+ADZbrr7HxuUr7blTm0Drt6vJ3IXLvlZxlH0XWrvtVunHJ+58+g1PKGS14fbapQ/uvD7Luhfa+gKcXmD9BueJPP5Thjh3VC7A8xWOy9yV7zz/BhwLr1dRlP0X6iVtsVg7yz2Vx5+fBnU/ltXDXl9v8PP0M1d/ATtvnUzJ2GPWSP1Cu7+qKP21Qr2wjXtBncnmcZ8tEyp9sgX8oNgw9fl2f1VR+msP5UqSOz4U1rFqS4Q+pMzWK3f75/MTRUkvlCvm+n3g0jrw6KtbnU1+kaiEOdkzd7h3LnHsFDDLlSn74jJllgmdeOZ61+8Cw2fcc+9xHnfcERVFSS9U4R/e5CPU2gPgUNg3TUmfnOgMHqzd8rUSoX8/IWRw/jnfW2WUpEL/JUNcYSPne7x9KXZYvpgS/hpT+lbooEUxoZGimNBIUUxopCgmNFIUExopigmNFMWERoqSC7WXxXpP4cti9jpj7yl8nVGQgq3U7iOuQplCh1Dj/zGhUQH+AFKkVmGNZXG1AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Apply'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e855bacc-e6e9-46b0-90e7-05f40318437a" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://finance.yahoo.com/quote/BRT/history?p=BRT" DesignTimeRectangle="1120, 757, 100, 34" ElementType="Button" FriendlyName="'Apply'" FullSelectorArgument="&lt;webctrl parentid='Col1-1-HistoricalDataTable-Proxy' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='Col1-1-HistoricalDataTable-Proxy' tag='BUTTON' type='' aaname='Apply' check:text='Apply' /&gt;" Guid="590b2b97-741e-48a7-a989-0aed1523ad24" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGgAAAAmCAYAAAAoTt69AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL4SURBVGhD7ZtPaxNBGIf9Br37EXL3LH6DCiLSs4cqFDz0IL0JQhU8SLBUKgQs1GoED8ZDRSJqEbUeQhRSQTEqKFGx/3St1tWfv9mdCbObQaUt7hv6LjxkZ97JFuaZd+ZNSXatfI6gyEUFCScjaGT6B3Yf+4WBI1AKwMy9ceA76QoygdCblP+PL6krSDNHDsZFj6DQQKU4VJBwVJBwVJBwVJBwVJBwVJBwVJBwVJBwZAs6ARycAAbHA7EtMHwXaH4ATgdi0hAt6HgLybX+AigF4pul/Dp9bjkQk4ZcQWPAgw3KIfgJTJ0KjNkkKmgbKN2gHE5idT59bd3x4heBDvuePwNeGYG8Yg6qztr4rbRvgRm4HKf3G6vAmXIa9wWNMzvzC6Dyjn0fgQO2XSRiBU295SR9AoZ4X/+amzArKF4Gzl7iOUUaX9jxHTjJzHOCIj5jrAIcrgFtioz5DPO8TAZdBpZ4v3jPPvs88IbtzIIoEJmCuJoXOUnth2nbnUVVTl4St4I6DdsmpXo65v51tq2gBl9dfKSZ9s2eywkiNWaXWwxDC7xnRpWNaBsvEpGCkkni1XwMTN4mT4BvbHeFBAS5vkRKQJDrq3FcXpD7e2YBGFnbXZRsBZGCqlzNMbekFW5tjsicJdzGRs2YP2RQ/SrbAUEugyrMzp4igX0tZs3S+3S7S7LQxQpGniB7JuTPgGHKMFciwApa52F+lJ+R9kyyn+dR/gzqsIg4xM9Se6f5PMaCZ5AlKRbM5RaBEMQJGn3KSQqV1U6K2X7s/SqlrHFscjHDbl6zY50gZqIt8pIqr3IhjYcEDfC9ps7IbJsCECfon/C3OGbM4ASzyI/7W5z5bwTL67+dKT2FiBD6X1Ao7gsKxXPMcKs0mRa1gX2BeJH0pyCWynMvyVwgZrjCD6mMz/A1GM8xvwY8YiW3X0hp7dOfgnYQKkg4Kkg4Kkg4Kkg4Kkg4PYL0y/NyCH55Xn9+Iofgz0+cJM2k4jBz78sxZAQp8lBBoonwGx2H+kv1kQuDAAAAAElFTkSuQmCC" InformativeScreenshot="8499ea5cae220335bd60d76ffa34a679.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='BRT Apartments Corp. (BRT) Stock Historical Prices &amp;amp; Data - Yahoo Finance' /&gt;" SearchSteps="FuzzySelector, Image">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target DesignTimeRectangle="1152, 766, 35, 16" ElementType="Text" FriendlyName="'Apply'" FullSelectorArgument="&lt;webctrl aaname='Apply' parentid='Col1-1-HistoricalDataTable-Proxy' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Apply' parentid='Col1-1-HistoricalDataTable-Proxy' tag='SPAN' type='' check:text='Apply' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAUCAYAAAAOTSQ2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJYSURBVEhL7ZVNa1NBFIb9B/0f2Xct/oMKItK1iyq460K6E4QquJCgtFQIKNRqBBfGRUUiahG1LkIU0kLFqKBExdYWY7VceX3mq869GSxNQLrowMu9M+/J5Jkzc+YeGDoh7VXtw/Wrfbh+lYY7Ix29LI1MJrwBNPZIan6Wzie8lJJwp1uybfO1VEr4/ar8zs1bTngp9cJNSE+3AEP6Lc2cK/gDaGC40l3AmKC64J6th5F/VeowtrIsvTXwtIyg6pz377uxRTK/lrn3rXXpQtn5Mdwku1JcfOUjY1+kI77fAzfzgYCv0ijv9R/54ACXrUkXr3MuUeM7A7+ks2Q8wHWZY6IiHa9JbRaRMYeZL5e5G9Iq70uP/dzT0nv6cTLycKxiiYD2M9cPZ6/KD63v4ToN30eluot5coe+h2vwDP6pphubu1SAQzWyGhIxusg7mSybRXo/B2cDaM0X0tQD9FL6SX8bJgEXxixQAi6M1YgrwoX/M4s3oMUCzMFVWUXGNnxjO4O65uywdeMm5h+Zq9+in4ALmauwKz0FwViLbK1+cltssx889BfOn4FcAaAxQEyzf+7hNjm4J7kDh6cY5/wVz1yHgjnGXXnwGvPhJc+cly0M00ICIm3Djb8iIHV1BCCTcv++DtAGsbaR2Xu3fWyAYwd8MdtqrlxxfgpuiN+amsodFa98QeykeFvJ1AhfkeHYj7fVfGW4Qna6xHuKLlL/cCk/hkv5Bc1yPEyGu23pUMLfHRzXwfwbNJ/wjG5yAePP8kz6BS1sSM+p2MPR9RFrd3D/WXsYTvoDT4Z2eIIY3ucAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                        <uix:Target DesignTimeRectangle="360, 765, 70, 16" ElementType="Text" FriendlyName="'Time Period'" FullSelectorArgument="&lt;webctrl aaname='Time Period' parentid='Col1-1-HistoricalDataTable-Proxy' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Time Period' parentid='Col1-1-HistoricalDataTable-Proxy' tag='SPAN' type='' check:text='Time Period' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAUCAYAAAAqVKv2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPcSURBVFhH7ZddSBRRFMcHLiy0MvuwuLS+bIYIi4EmgaYZRAUr9GFGRWVSWlYYZEtQD/ax9dRDBZkpImJFadKn9EEQYVGEIImm2YdhiqW4sqwg+/zv3Dsz6+w6tpPlQrAPP5w759x7z/7nnnOu0tR0CAlikxDKJAmhTJIQyiQJoUyiCBUYw6ePn9BnwLcJsg+14ujuc3gyGjn5nzIxMntfIz8zBN7gwu6DaOgzsJmgv3kvlh+4HfFOEeqdF6mSBMkATyO3VyPbsQYXBmYm/nMaC6P2tmBxwTl0BAx8YzF6A9tcS7D/oYHNBG+PLYXkaYp4Nyv1jJzighCqEA3q2P+5Hh6bhIzqvki/ODB/obp8yHHk4nQXH9/GTsdqVFQXI83KIFlkZB95jBd1xXDLFkjMirSSVgxqcwM9qN3ihmyhU0K+br1NT5RQnAYPzVFj8XfXo8gtw0KnzSK7satlWPXj8WzE2ZterHLJkLfwlOHvHNh5S10r8BXNFdlI4fFSfCkFXtz9HFTnh3RrMyxKK0blZtc8hRKpuRRV7/i4CR4pCXnnX1EdCWLkfimcFHzGcXX8/DD5JmPfM+4bxJ0dNlizTqL9+yTG+5ux1cmQ6TM4JdFCUZ2pTJXgPPiSnu9huy0JmSee0h6T6G3aBifLwpkP3JfHI8G24hAaO6i+0T7aO1E21BhYejlaesYw/qMXLWXpYM5yPOFpLdZmSC9rQy+Pv6cNlVlJYQ3u7KBnW8l8hdKetbEWFId+oEsdB8jGUlDaNlOk75XT18q/hGH9+hwhlBPZm4uwab3y9Zl9ExqGQvCTjaXsRWu42D9CGe2Rd/EnzY2Oh6OLScSgfTiN59iXzLDhekhZO5lEC9siNfB3P0LNg56FEKoTVXQSxFjMs0CmNHDoyfGhU78+Rwi1DKW111BDtHYMYkQt5CImStuINYics+/JHkMoEcM61EY0BSXG1GOdytrr6uEP24w1WFihRi8hb9aPmIPo1NMxfHEVpFQv3hrYYgolYnCh8rXerpz6tXVB9PuyZq0df6Gmf+Lyagab5yrlv2afxDdRR7Sxym+Emhq9ggJmg6fmI8a1d3TvUu5aMYQKx1CPAXGqghioK4TNSnvxe+GHU8iglC9pV2Oa6IIvf6ZGxSf1+HjoMapy7WC8o8hW+ktdS3QmzV/ld0IRg+1e5NqVriXz7kUpXSS6WiyhCIqhIpP2Vucy+0pUtWtdM4gO30rYGe+m1PksGajYkxPWYM5ivmCoN++/unET4995MR+ZOVl/gP/HIPq+jEXUozDiv5O5142fUP85CaFMkhDKJAmhTBHCLz9y8WT1WE87AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                        <uix:Target DesignTimeRectangle="895, 757, 128, 30" FriendlyName="'Frequency:Daily'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div' idx='3' parentid='Col1-1-HistoricalDataTable-Proxy' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname='' parentid='Col1-1-HistoricalDataTable-Proxy' tag='DIV' check:text='Frequency:Daily' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+            </Sequence>
+            <Sequence sap2010:Annotation.AnnotationText="Download Ticker Data to Desktop" DisplayName="Sequence - Download Data" sap:VirtualizedContainerService.HintSize="484,1053" sap2010:WorkflowViewState.IdRef="Sequence_23">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="dataDownloadLink" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Trace" Message="[&quot;Proceed Download Data&quot;]" />
+              <ui:GetLastDownloadedFile File="{x:Null}" Timeout="{x:Null}" DisplayName="Wait for Download" DownloadFolder="C:\Users\SC2\Desktop" sap:VirtualizedContainerService.HintSize="434,797" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_2">
+                <ui:GetLastDownloadedFile.Body>
+                  <ActivityAction>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,590" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ClickType="Single" DisplayName="Click 'Download'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_18" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e855bacc-e6e9-46b0-90e7-05f40318437a" Version="V1">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://finance.yahoo.com/quote/MSFT/history?period1=511056000&amp;period2=1643068800&amp;interval=1d&amp;filter=history&amp;frequency=1d&amp;includeAdjustedClose=true" DesignTimeRectangle="1151, 818, 79, 18" ElementType="Text" FriendlyName="'Download'" FullSelectorArgument="[String.Format(&quot;&lt;html app='firefox.exe' title='*({0}) Stock Historical Prices &amp;amp; Data - Yahoo Finance' /&gt;&lt;webctrl aaname='Download' parentid='Col1-1-HistoricalDataTable-Proxy' innertext='Download' /&gt;&quot;, in_userInputTicker)]" FuzzySelectorArgument="&lt;webctrl aaname='Download' parentid='Col1-1-HistoricalDataTable-Proxy' tag='SPAN' type='' check:text='Download' /&gt;" Guid="ec2d2577-1cf9-440e-861d-815c421b091c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD8AAAAUCAYAAAA6NOUqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOTSURBVFhH7VbtS1NhFO9vGoOBokQZgWHiMGVSqTTDsCWCZASTZISBoh+E+hAOxEBE0VASJJb4oQiKUiGRSnL3bnfvm3ufU/h1nuc+eq8o5YZINH8wuOee+5xzfuft2QWUMM7JlyrOyZcqdOTziAYyUMQvmhOvzxhfpxQ8mEwL6fRwnF0d+RhstW4YdD9Ts4LhT1lKy9lhvs+NGmdKSKeH4+weIW9zCTGXwZLTi8paid6dXRv8G+Q59vB5RIahJYgV8Sa7HsH9Dgkm1hkWD7oXUsgyxUoQ160BvOdfAb7XCi47oogL+e2QjKZX5Nwdxm2rH8NOBVcbqMPqJZiHthER3x0OMo+VGR/MFok6UUJFhx/Tv/b7MIHnXR5U1LMuVXWz8p7QAZEvIdxplWAkXdWjEHq7CyZPWA3gUq0HI2569oZhMUtom0nSTqAdsRFBm8WN1jnqjF06b/Zg8Ds7lMFoJwVlVjCVZHICjlsyHKv0uBlCDdl7uMRs7CGxFiRZ6Ah68tKkF0aLgvGNHLK5HNZmFFSSzYkYKdMpvPuYhBLeQWI7hek+SlBnGD528CDOFBK7LM4obC3FkBfBDm8CG04PDD2Rg2oyxOcUGNpD2MQOJnrcsExmgGQErY0+2Ei2uagazEajH8vsALfnwzw/zZDEoFXzq5FPYfguS+yOquBQfdSNHV2I+UUfdYBq97g4i2h7gq7yzED1S15KDS7NqY8qxZxG6F3lwDZPTPmzbbWCfTF1cR4hr5I8Sp7Fs99JGpjeQLbYSPxYCKDJKqOMqlzBR0O1e1ycRZA/PPP82R49tP15xq1BfGMCtdsNM1XczpYkVVzXAQcVPDF5Nipu3FvU5pjFM2tXicXfKDA2KnD+3FHj0RVheYASwROk4cTk86kslK0Exvs9MJlldC+LwNeDuMLmel3Qz1HLtuuNqkQMlID5XSaL2a/1YjTIPyiAPO3QFzKM7ZR4cdlkyX8d+WcjuDlGrW0LQ+KaPWyNU9cJu/kPfpTTbhgPqYnLh+LoJR9/Jb9/xxsbZFR3BXTblYGczPlQRRvWRG1mok16rT+KLU5UBesO42Nty/NROAiSUAB57KYx8UTmfnhb19PtsphWKx2LobuZtjnFebFBQr1dofHct5uDa4gKRzzKWJw3FTieev5EvhCo/wbP7F8gbXolQBtfiBrotghnEEjpR0MHdo5uA3359CiS/P+Bc/KlihImD/wGTodz0bQB3UsAAAAASUVORK5CYII=" InformativeScreenshot="e352195e4ba0d085c7124b8019e43d40.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Microsoft Corporation (MSFT) Stock Historical Prices &amp;amp; Data - Yahoo Finance' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target DesignTimeRectangle="350, 747, 880, 54" FriendlyName="'Time Period:Mar'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div' parentid='Col1-1-HistoricalDataTable-Proxy' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='Col1-1-HistoricalDataTable-Proxy' tag='DIV' aaname='' check:text='Time Period:Mar 13, 1986 - Jan 25, 2022Show:Historical PricesFrequency:DailyApply' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <ui:SetFocus DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Set Focus 'Edit'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="SetFocus_1">
+                        <ui:SetFocus.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7ce56810-64b6-4c6e-8ec0-7f2b6aaebc53" InformativeScreenshot="7ab405b9c377bb717c709946f040bfa9" Selector="&lt;wnd app='firefox.exe' cls='#32770' title='Enter name of file to save to…' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:SetFocus.Target>
+                      </ui:SetFocus>
+                      <ui:SendHotkey Activate="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DisplayName="Send Hotkey - Enter" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="enter" KeyModifiers="None" SendWindowMessages="True" SpecialKey="True">
+                        <ui:SendHotkey.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d9e9f8ea-c969-4960-897d-90910001635a" InformativeScreenshot="f45696ce1522f3c3ce32b26113e89328" Selector="&lt;wnd app='firefox.exe' cls='#32770' title='Enter name of file to save to…' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:SendHotkey.Target>
+                      </ui:SendHotkey>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:GetLastDownloadedFile.Body>
+              </ui:GetLastDownloadedFile>
+            </Sequence>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Trace" Message="[&quot;Download Ticker Data Completed&quot;]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -1088, 1936, 1066" BrowserType="Firefox" IconBase64="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" InformativeScreenshot="2efd1fa01121ff62a26d2b27079dba00.png" Selector="&lt;html app='firefox.exe' url='https://finance.yahoo.com/' /&gt;" Url="[&quot;https://finance.yahoo.com/quote/&quot;+in_userInputTicker+&quot;/history?p=&quot;+in_userInputTicker]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

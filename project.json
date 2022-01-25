@@ -1,6 +1,6 @@
 {
-  "name": "InvestmentReportTemplate",
-  "description": "Investment Report Workflow Template",
+  "name": "InvestmentReport",
+  "description": "Investment Report",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.11.4]",
